@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dishes",
+  "info": {
+    "name": "Dish"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "cookingTime": {
+      "type": "time",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 2000
+    },
+    "intakeCalories": {
+      "type": "decimal",
+      "max": 99999999
+    }
+  }
+}
