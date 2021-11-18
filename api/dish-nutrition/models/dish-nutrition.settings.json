@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dish_nutritions",
+  "info": {
+    "name": "DishNutrition"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dish": {
+      "model": "dish",
+      "via": "dish_nutritions"
+    },
+    "nutrition": {
+      "model": "nutrition",
+      "via": "dish_nutritions"
+    },
+    "quantity": {
+      "type": "decimal",
+      "max": 99999999,
+      "min": 0,
+      "required": true
+    },
+    "unit": {
+      "type": "string",
+      "maxLength": 10,
+      "required": true,
+      "minLength": 1
+    }
+  }
+}

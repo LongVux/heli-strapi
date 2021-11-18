@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dish-prices",
+      "handler": "dish-price.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dish-prices/count",
+      "handler": "dish-price.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dish-prices/:id",
+      "handler": "dish-price.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/dish-prices",
+      "handler": "dish-price.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dish-prices/:id",
+      "handler": "dish-price.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dish-prices/:id",
+      "handler": "dish-price.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

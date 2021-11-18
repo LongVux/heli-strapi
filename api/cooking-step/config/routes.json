@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cooking-steps",
+      "handler": "cooking-step.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cooking-steps/count",
+      "handler": "cooking-step.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cooking-steps/:id",
+      "handler": "cooking-step.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cooking-steps",
+      "handler": "cooking-step.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cooking-steps/:id",
+      "handler": "cooking-step.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cooking-steps/:id",
+      "handler": "cooking-step.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

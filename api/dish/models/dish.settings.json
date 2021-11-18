@@ -37,6 +37,30 @@
     "intakeCalories": {
       "type": "decimal",
       "max": 99999999
+    },
+    "dish_prices": {
+      "via": "dish",
+      "collection": "dish-price"
+    },
+    "tags": {
+      "via": "dishes",
+      "collection": "tag"
+    },
+    "cooking_steps": {
+      "via": "dish",
+      "collection": "cooking-step"
+    },
+    "level": {
+      "via": "dishes",
+      "model": "level"
+    },
+    "dish_ingredients": {
+      "via": "dish",
+      "collection": "dish-ingredient"
+    },
+    "dish_nutritions": {
+      "via": "dish",
+      "collection": "dish-nutrition"
     }
   }
 }

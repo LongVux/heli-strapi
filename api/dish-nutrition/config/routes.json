@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dish-nutritions",
+      "handler": "dish-nutrition.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dish-nutritions/count",
+      "handler": "dish-nutrition.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dish-nutritions/:id",
+      "handler": "dish-nutrition.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/dish-nutritions",
+      "handler": "dish-nutrition.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dish-nutritions/:id",
+      "handler": "dish-nutrition.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dish-nutritions/:id",
+      "handler": "dish-nutrition.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

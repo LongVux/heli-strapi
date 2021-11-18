@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cooking_steps",
+  "info": {
+    "name": "CookingStep"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dish": {
+      "model": "dish",
+      "via": "cooking_steps"
+    },
+    "stepOrder": {
+      "type": "integer",
+      "required": true,
+      "max": 50,
+      "min": 1
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 2000
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dish_prices",
+  "info": {
+    "name": "DishPrice"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dish": {
+      "model": "dish",
+      "via": "dish_prices"
+    },
+    "price": {
+      "type": "decimal",
+      "max": 99999999,
+      "min": 0,
+      "required": true
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "VND"
+      ]
+    },
+    "location": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100,
+      "minLength": 1
+    }
+  }
+}

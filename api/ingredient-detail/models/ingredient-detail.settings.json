@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ingredient_details",
+  "info": {
+    "name": "IngredientDetail"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ingredient": {
+      "model": "ingredient",
+      "via": "ingredient_detail"
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 1000
+    },
+    "season": {
+      "type": "enumeration",
+      "enum": [
+        "SPRING",
+        "SUMMER",
+        "FALL",
+        "WINTER",
+        "RAIN",
+        "DRY"
+      ]
+    },
+    "howToSelect": {
+      "type": "text",
+      "maxLength": 1000
+    },
+    "caution": {
+      "type": "text",
+      "required": false,
+      "maxLength": 500
+    }
+  }
+}

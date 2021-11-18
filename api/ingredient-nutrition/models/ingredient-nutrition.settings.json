@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ingredient_nutritions",
+  "info": {
+    "name": "IngredientNutrition"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ingredient": {
+      "model": "ingredient",
+      "via": "ingredient_nutritions"
+    },
+    "nutrition": {
+      "model": "nutrition",
+      "via": "ingredient_nutritions"
+    },
+    "quantityPerIngredientUnit": {
+      "type": "decimal",
+      "max": 999999999,
+      "required": true,
+      "min": 0
+    },
+    "unit": {
+      "type": "string",
+      "required": true,
+      "maxLength": 10,
+      "minLength": 1
+    }
+  }
+}

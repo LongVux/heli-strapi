@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ingredient-prices",
+      "handler": "ingredient-price.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ingredient-prices/count",
+      "handler": "ingredient-price.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ingredient-prices/:id",
+      "handler": "ingredient-price.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ingredient-prices",
+      "handler": "ingredient-price.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ingredient-prices/:id",
+      "handler": "ingredient-price.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ingredient-prices/:id",
+      "handler": "ingredient-price.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

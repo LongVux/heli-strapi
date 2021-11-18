@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nutritions",
+  "info": {
+    "name": "Nutrition"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 100,
+      "minLength": 1
+    },
+    "unit": {
+      "type": "string",
+      "required": true,
+      "maxLength": 10,
+      "minLength": 1
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 2000
+    },
+    "dish_nutritions": {
+      "via": "nutrition",
+      "collection": "dish-nutrition"
+    },
+    "ingredient_nutritions": {
+      "via": "nutrition",
+      "collection": "ingredient-nutrition"
+    }
+  }
+}

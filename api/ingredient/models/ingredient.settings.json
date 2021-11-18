@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ingredients",
+  "info": {
+    "name": "Ingredient"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 100
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "unit": {
+      "type": "string",
+      "unique": false,
+      "required": true,
+      "maxLength": 10,
+      "minLength": 1
+    },
+    "caloriesPerUnit": {
+      "type": "decimal",
+      "required": false
+    },
+    "ingredient_prices": {
+      "via": "ingredient",
+      "collection": "ingredient-price"
+    },
+    "ingredient_detail": {
+      "via": "ingredient",
+      "model": "ingredient-detail"
+    },
+    "dish_ingredients": {
+      "via": "ingredient",
+      "collection": "dish-ingredient"
+    },
+    "ingredient_nutritions": {
+      "via": "ingredient",
+      "collection": "ingredient-nutrition"
+    }
+  }
+}

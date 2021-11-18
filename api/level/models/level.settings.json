@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "levels",
+  "info": {
+    "name": "Level"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 10,
+      "minLength": 1,
+      "unique": true
+    },
+    "dishes": {
+      "collection": "dish",
+      "via": "level"
+    }
+  }
+}
